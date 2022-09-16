@@ -4,7 +4,7 @@ import Router from "../../node_modules/next/router"
 import Loading from '../../public/images/loading.gif'
 import useAuth from "../data/hook/useAuth"
 
-export default function forcarAutenticacao(jsx) {
+export default function ForcarAutenticacao(jsx) {
 
   const { usuario, carregando } = useAuth()
 
@@ -32,7 +32,7 @@ export default function forcarAutenticacao(jsx) {
       <div className={`
        flex justify-center items-center h-screen
       `}>
-        <Image src={Loading} />
+        <Image src={Loading} alt="" />
       </div>
     )
   }

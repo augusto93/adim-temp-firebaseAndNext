@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "../../node_modules/next/image";
 import AuthInput from "../components/auth/AuthInput";
 import { IconeAtencao } from "../components/icons/index";
 import useAuth from "../data/hook/useAuth";
@@ -30,15 +31,19 @@ export default function Autenticacao() {
   }
 
   return (
-    <div className=" flex h-screen items-center justify-center">
+    <div className="flex h-screen items-center justify-center">
       <div className=" hidden md:block md:w-1/2 lg:w-2/3">
-        <img 
+        <Image 
           src="https://source.unsplash.com/random" 
           alt="Imagen da Tela de Autenticação"
-          className=" h-screen w-full object-cover" 
+          layout="fill"
+          className=" h-screen object-cover w-2/3 " 
           />
       </div>
-      <div className=" m-10 w-full md:w-1/2 lg:w-1/3">
+      <div className="
+        flex flex-col justify-center
+        z-10 p-10 bg-white 
+        h-full w-full md:w-1/2 lg:w-1/3">
         <h1 className={` text-2xl font-bold mb-5 `}>
           {modo === 'login' ? 'Entre com a Sua Conta' : 'Cadastre-se na Plataforma'}
         </h1>
